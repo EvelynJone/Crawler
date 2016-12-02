@@ -32,7 +32,7 @@ public class Main {
 
         for (Category category : categoryList) {
             MyRunnable thread = new MyRunnable(category);
-            thread.run();
+			new Thread(thread).start();
             results.addAll(thread.getResults());
         }
 
